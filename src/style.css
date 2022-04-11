@@ -50,13 +50,24 @@ input {
 button {
     font-family: "Karla", sans-serif;
     grid-column:  1 / -1;
-    height: 40px;
     border-radius: 5px;
     background: linear-gradient(90deg, #711F8D 1.14%, #A818DA 100%);
-    padding: 10px 156px;
+    padding: 10px;
     border: none;
     color: #FFFFFF;
     line-height: 18px;
     text-align: center;
     cursor: pointer;
+}
+
+.meme--img {
+    max-width: 100%;
+}
+
+.meme--section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
