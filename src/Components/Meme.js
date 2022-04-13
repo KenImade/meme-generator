@@ -19,11 +19,33 @@ function Meme() {
         }))
     }
 
+    function handleInput(event) {
+        const {name, value} = event.target
+        setMeme(prevMeme => ((
+            {
+                ...prevMeme,
+                [name]: value
+            }
+        )))
+    }
+
     return (
         <section className="meme--section">
             <div className="meme--form">
-                <input type="text" placeholder="Top text" />
-                <input type="text" placeholder="Bottom text"/>
+                <input 
+                    type="text" 
+                    placeholder="Top text" 
+                    name="topText"
+                    onChange={handleInput}
+                    value={meme.topText}
+                />
+                <input 
+                    type="text" 
+                    placeholder="Bottom text"
+                    name="bottomText"
+                    onChange={handleInput}
+                    value={meme.bottomText}
+                />
                 <button onClick={generateRandomMeme}>
                     Generate new meme 🖼️
                 </button>
@@ -31,8 +53,8 @@ function Meme() {
 
             <div className="meme">
                 <img alt="meme" src={meme.randomImage} className="meme--img"/>
-                <h2 className="meme--text top">Nobody Above</h2>
-                <h2 className="meme--text bottom">Breakfast</h2>
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
         </section>
     )
