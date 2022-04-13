@@ -38,6 +38,7 @@ section {
     display: grid;
     grid-template: 40px 40px / 1fr 1fr;
     gap: 17px;
+    margin-bottom: 17px;
 }
 
 input {
@@ -61,13 +62,48 @@ button {
 }
 
 .meme--img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
 }
 
 .meme--section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    padding: 36px;
+}
+
+.meme {
+    position: relative;
+}
+
+.meme--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
 }
